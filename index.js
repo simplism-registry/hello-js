@@ -13,25 +13,13 @@ function handle() {
 	}
 	const res = Http.request(req)
 
-	var response = {}
-	if (res.status != 200) {
-		response = {
-			header: {
-				"Content-Type":["text/plain; charset=utf-8"],
-				"simplism-version": ["0.0.7"]
-			},
-			body: text + " 😡",
-			code: 200
-		}
-	} else {
-		response = {
-			header: {
-				"Content-Type":["text/plain; charset=utf-8"],
-				"simplism-version": ["0.0.7"]
-			},
-			body: text + " " + res.body,
-			code: 200
-		}
+	let response = {
+		header: {
+			"Content-Type":["text/plain; charset=utf-8"],
+			"simplism-version": ["0.0.7"]
+		},
+		body: text + " " + res.body,
+		code: 200
 	}
 	
 	// copy output to host memory
