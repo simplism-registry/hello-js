@@ -1,4 +1,3 @@
 #!/bin/bash
-curl http://localhost:8080 \
--H 'content-type: application/json; charset=utf-8' \
+curl -v http://localhost:8080 \
 -d 'Bob Morane'
