@@ -10,6 +10,11 @@ tasks:
         sudo tar -xf simplism.tar.gz -C /usr/bin
         rm simplism.tar.gz
         simplism version
+        wget https://github.com/WebAssembly/binaryen/releases/download/version_116/binaryen-version_116-x86_64-linux.tar.gz
+        tar -xf binaryen-version_116-x86_64-linux.tar.gz
+        sudo cp binaryen-version_116/bin/* /usr/bin
+        rm -rf binaryen-version_116
+        rm binaryen-version_116-x86_64-linux.tar.gz
 
 vscode:
   extensions:

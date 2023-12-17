@@ -2,7 +2,7 @@
 set -o allexport; source .release.env; set +o allexport
 echo "📦 create release: $TAG $MESSAGE"
 
-extism-js index.js -o ${WASM_FILE}
+extism-js index.js -i index.d.ts -o ${WASM_FILE}
 
 find . -name '.DS_Store' -type f -delete
 
