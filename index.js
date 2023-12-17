@@ -7,12 +7,18 @@ function handle() {
 
 	let text = "💛 Hello " + JSONData.body
 
+	const req = {
+		method: "GET",
+		url: "https://jsonplaceholder.typicode.com/todos/1"
+	}
+	const res = Http.request(req)
+	
 	let response = {
 		header: {
 			"Content-Type":["text/plain; charset=utf-8"],
             "simplism-version": ["0.0.7"]
 		},
-		body: text,
+		body: text + " " + res.body.title,
 		code: 200
 	}
 
